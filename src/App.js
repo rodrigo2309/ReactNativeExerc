@@ -1,9 +1,24 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 
-function App() {
-    //const jsx = <Text>Primeiro Componente 2</Text>
-    return <Text>Primeiro Componente 2</Text>
-}
+import X, { Comp1, Comp2 } from './components/Multi'
+import Primeiro from './components/Primeiro'
 
-export default App
+export default () => (
+    <View style={style.App}>        
+        <X />
+        <Comp1 />
+        <Comp2 />
+        <Primeiro/>
+    </View>
+)
+
+const style = StyleSheet.create({
+    App: {
+        //backgroundColor: '#A00',
+        flexGrow: 1,
+        justifyContent: "center",
+        alignItems: "center"
+    }
+})
+    
